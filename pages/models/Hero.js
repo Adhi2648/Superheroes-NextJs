@@ -13,3 +13,5 @@ const HeroSchema = new mongoose.Schema({
     maxlength: [200, "Please keep real name short"],
   },
 });
+
+module.exports = mongoose.models.Hero || mongooose.model("Hero", HeroSchema);
