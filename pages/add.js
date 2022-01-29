@@ -3,7 +3,7 @@ import React from "react";
 import { MDBBtn, MDBInput } from "mdb-react-ui-kit";
 const axios = require("axios").default;
 import { useState } from "react";
-import { useRouter } from "next/router";
+import Router from "next/router";
 
 function addNewHero() {
   const [form, setform] = useState({
@@ -28,7 +28,7 @@ function addNewHero() {
         },
         data: JSON.stringify(form),
       });
-      router.push("/");
+      Router.push("/");
     } catch (error) {
       console.log(error);
     }
